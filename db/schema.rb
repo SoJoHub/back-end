@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "thread_id"
+    t.integer "topic_id"
     t.integer "user_id"
     t.datetime "date_time"
     t.string "content"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
     t.string "password_digest"
     t.integer "age"
     t.string "field"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
