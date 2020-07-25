@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :interviews
   resources :applications
   resources :job_listings
-  resources :users
+  resources :users , only: [:create]
+  post "/login", to: "user#login"
+  get "/auto_login", to: "users#auto_login"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
