@@ -14,10 +14,10 @@ Interview.destroy_all
 Comment.destroy_all
 
 # USERS
-senada = User.create(name: "Senada Kadric", email: "senada23@yahoo.com", age: 23, field: "Junior Level Software Engineer", phone_number: "6465083193")
-hannah = User.create(name: "Hannah Kofkin", email: "hkofkin@gmail.com", age: 27, field: "Junior Level Software Engineer", phone_number: "8474711455")
-cristian = User.create(name: "Cristian Cedacero", email: "cristian.cedacero@gmail.com", age: 29, field: "Junior Level Software Engineer", phone_number: "3473894824")
-bashir = User.create(name: "Bashir", email: "bashiralhanshali@gmail.com", age: 28, field: "Junior Level Software Engineer", phone_number: "3475204589")
+senada = User.create(name: "Senada Kadric", email: "senada23@yahoo.com", age: 23, field: "Junior Level Software Engineer", phone_number: "6465083193", password: "hello")
+hannah = User.create(name: "Hannah Kofkin", email: "hkofkin@gmail.com", age: 27, field: "Junior Level Software Engineer", phone_number: "8474711455",password: "hello")
+cristian = User.create(name: "Cristian Cedacero", email: "cristian.cedacero@gmail.com", age: 29, field: "Junior Level Software Engineer", phone_number: "3473894824",password: "hello")
+bashir = User.create(name: "Bashir", email: "bashiralhanshali@gmail.com", age: 28, field: "Junior Level Software Engineer", phone_number: "3475204589",password: "hello")
 
 
 # JOB LISTINGS
