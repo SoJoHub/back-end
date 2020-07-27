@@ -9,10 +9,13 @@ class TopicsController < ApplicationController
         # byebug
         @topic = Topic.find(params[:id])
         @comments = @topic.comments
-        render json: {
-            topic: @topic,
-            comments: @comments
-        }
+        # byebug
+        render json: {topic: TopicSerializer.new(@topic)}
+
+        # render json: {
+        #     topic: @topic,
+        #     comments: @comments
+        # }
     end
 
     def create 
