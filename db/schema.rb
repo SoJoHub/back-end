@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
     t.integer "forum_id"
     t.integer "user_id"
     t.string "title"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -48,11 +48,11 @@ forum1 = Forum.create(title: "Software Engineer Forum")
 
 
 # THREADS
-topic1 = Topic.create(forum_id: forum1.id, user_id: senada.id, title: "Just applied to JP Morgan")
-topic2 = Topic.create(forum_id: forum1.id, user_id: hannah.id, title: "Lets discuss cool design ideas!")
-topic3 = Topic.create(forum_id: forum1.id, user_id: cristian.id, title: "Baby Sharks Unite???")
+topic1 = Topic.create(forum_id: forum1.id, user_id: senada.id, title: "Just applied to JP Morgan", description: "the description goes here")
+topic2 = Topic.create(forum_id: forum1.id, user_id: hannah.id, title: "Lets discuss cool design ideas!", description: "the description goes here")
+topic3 = Topic.create(forum_id: forum1.id, user_id: cristian.id, title: "Baby Sharks Unite???", description: "the description goes here")
 
-topic4 = Topic.create(forum_id: forum1.id, user_id: bashir.id, title: "How to build a full functioning web app in 30 seconds")
+topic4 = Topic.create(forum_id: forum1.id, user_id: bashir.id, title: "How to build a full functioning web app in 30 seconds", description: "the description goes here")
 
 
 # COMMENTS
