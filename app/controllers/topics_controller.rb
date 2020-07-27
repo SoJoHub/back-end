@@ -11,11 +11,6 @@ class TopicsController < ApplicationController
         @comments = @topic.comments
         # byebug
         render json: {topic: TopicSerializer.new(@topic)}
-
-        # render json: {
-        #     topic: @topic,
-        #     comments: @comments
-        # }
     end
 
     def create 
