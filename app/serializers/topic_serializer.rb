@@ -1,5 +1,7 @@
 class TopicSerializer < ActiveModel::Serializer
-  attributes :id, :forum_id, :user_id, :title, :created_at, :description,  :user_name, :comments
+  has_many :comments 
+
+  attributes :id, :forum_id, :user_id, :title, :created_at, :description,  :user_name
 
 
 

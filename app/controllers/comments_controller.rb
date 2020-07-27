@@ -1,5 +1,12 @@
 class CommentsController < ApplicationController
-    # before_action :authorized
+     before_action :authorized
+
+
+    # def topic_comments  
+    #   @topic = Topic.find(params[:id])
+    #   @comments = @topic.comments
+    #   render json: @comments
+    # end
 
     def create 
         # byebug 
