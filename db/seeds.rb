@@ -26,12 +26,12 @@ listing2 = JobListing.create(company: "Google", title: "software engineer", desc
 listing3 = JobListing.create(company: "Amazon", title: "software engineer", description: "eat sleep code repeat", location: "Seattle", listing_url: "amazon.com")
 
 # APPLICATIONS
-app1 = Application.create(user_id: hannah.id, job_listing_id: listing1.id, date_applied: DateTime.now, status: "applied", to_do_list: "{ }")
-app2 = Application.create(user_id: hannah.id, job_listing_id: listing2.id, date_applied: DateTime.now, status: "applied")
-app3 = Application.create(user_id: hannah.id, job_listing_id: listing3.id, date_applied: DateTime.now, status: "interviewed")
-app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, date_applied: DateTime.now, status: "applied")
-app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, date_applied: DateTime.now, status: "interview scheduled")
-app6 = Application.create(user_id: cristian.id, job_listing_id: listing1.id, date_applied: DateTime.now, status: "applied")
+app1 = Application.create(user_id: hannah.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
+app2 = Application.create(user_id: hannah.id, job_listing_id: listing2.id, status: "applied")
+app3 = Application.create(user_id: hannah.id, job_listing_id: listing3.id, status: "interviewed")
+app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied")
+app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "interview scheduled")
+app6 = Application.create(user_id: cristian.id, job_listing_id: listing1.id, status: "applied")
 
 # INTERVIEWS
 Interview.create(application_id: app1.id, date: DateTime.now, complete: false, interviewer: "Bashir", location: "NYC", notes: "im so nervous")
@@ -48,25 +48,25 @@ forum1 = Forum.create(title: "Software Engineer Forum")
 
 
 # THREADS
-topic1 = Topic.create(forum_id: forum1.id, user_id: senada.id, title: "Just applied to JP Morgan", date_time: DateTime.now)
-topic2 = Topic.create(forum_id: forum1.id, user_id: hannah.id, title: "Lets discuss cool design ideas!", date_time: DateTime.now)
-topic3 = Topic.create(forum_id: forum1.id, user_id: cristian.id, title: "Baby Sharks Unite???", date_time: DateTime.now)
+topic1 = Topic.create(forum_id: forum1.id, user_id: senada.id, title: "Just applied to JP Morgan")
+topic2 = Topic.create(forum_id: forum1.id, user_id: hannah.id, title: "Lets discuss cool design ideas!")
+topic3 = Topic.create(forum_id: forum1.id, user_id: cristian.id, title: "Baby Sharks Unite???")
 
-topic4 = Topic.create(forum_id: forum1.id, user_id: bashir.id, title: "How to build a full functioning web app in 30 seconds", date_time: DateTime.now)
+topic4 = Topic.create(forum_id: forum1.id, user_id: bashir.id, title: "How to build a full functioning web app in 30 seconds")
 
 
 # COMMENTS
-Comment.create(topic_id: topic1.id, user_id: hannah.id, date_time: DateTime.now, content: "omg what happened?")
-Comment.create(topic_id: topic1.id, user_id: senada.id, date_time: DateTime.now, content: "i was rejected :(")
+Comment.create(topic_id: topic1.id, user_id: hannah.id, content: "omg what happened?")
+Comment.create(topic_id: topic1.id, user_id: senada.id, content: "i was rejected :(")
 
-Comment.create(topic_id: topic2.id, user_id: cristian.id, date_time: DateTime.now, content: "ooo i want in on this")
-Comment.create(topic_id: topic2.id, user_id: bashir.id, date_time: DateTime.now, content: "ome too! want to learn design!")
+Comment.create(topic_id: topic2.id, user_id: cristian.id, content: "ooo i want in on this")
+Comment.create(topic_id: topic2.id, user_id: bashir.id, content: "ome too! want to learn design!")
 
-Comment.create(topic_id: topic3.id, user_id: senada.id, date_time: DateTime.now, content: "IM BABY SHARK")
-Comment.create(topic_id: topic3.id, user_id: bashir.id, date_time: DateTime.now, content: "i'm grandpa shark")
+Comment.create(topic_id: topic3.id, user_id: senada.id, content: "IM BABY SHARK")
+Comment.create(topic_id: topic3.id, user_id: bashir.id, content: "i'm grandpa shark")
 
-Comment.create(topic_id: topic4.id, user_id: cristian.id, date_time: DateTime.now, content: "how did you do it :O")
-Comment.create(topic_id: topic4.id, user_id: hannah.id, date_time: DateTime.now, content: "you are a robot bashir")
+Comment.create(topic_id: topic4.id, user_id: cristian.id, content: "how did you do it :O")
+Comment.create(topic_id: topic4.id, user_id: hannah.id, content: "you are a robot bashir")
 
 
 

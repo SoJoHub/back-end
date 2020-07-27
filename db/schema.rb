@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
   create_table "applications", force: :cascade do |t|
     t.integer "user_id"
     t.integer "job_listing_id"
-    t.datetime "date_applied"
     t.string "status"
     t.string "to_do_list"
     t.datetime "created_at", precision: 6, null: false
@@ -28,7 +27,6 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
   create_table "comments", force: :cascade do |t|
     t.integer "topic_id"
     t.integer "user_id"
-    t.datetime "date_time"
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -65,7 +63,6 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
     t.integer "forum_id"
     t.integer "user_id"
     t.string "title"
-    t.datetime "date_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

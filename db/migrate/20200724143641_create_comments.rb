@@ -3,7 +3,6 @@ class CreateComments < ActiveRecord::Migration[6.0]
     create_table :comments do |t|
       t.integer :topic_id
       t.integer :user_id
-      t.datetime :date_time
       t.string :content
 
       t.timestamps
