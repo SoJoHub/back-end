@@ -17,7 +17,7 @@ class ApplicationsController < ApplicationController
 
     def create 
         job_listing = JobListing.create(job_listing_params)
-        application = Application.create(user_id: @user.id, job_listing_id: job_listing.id, status: application_params["status"])
+        application = Application.create(user_id: @user.id, job_listing_id: job_listing.id, status: application_params["status"], date_applied: application_params["date_applied"])
         render json: application
     end 
 
@@ -25,7 +25,7 @@ class ApplicationsController < ApplicationController
     private
   
     def application_params
-      params.permit(:user_id, :job_listing_id, :status)
+      params.permit(:user_id, :job_listing_id, :status, :date_applied)
     end
 
     def job_listing_params
