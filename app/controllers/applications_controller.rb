@@ -4,7 +4,6 @@ class ApplicationsController < ApplicationController
     def index
        
         applications =  @user.applications
-
         render json: applications
     end
 
