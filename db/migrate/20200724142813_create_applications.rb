@@ -5,7 +5,7 @@ class CreateApplications < ActiveRecord::Migration[6.0]
       t.integer :job_listing_id
       t.string :status
       t.string :to_do_list
-
+      t.datetime :date_applied
       t.timestamps
     end
   end

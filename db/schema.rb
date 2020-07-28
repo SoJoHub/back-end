@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
     t.integer "job_listing_id"
     t.string "status"
     t.string "to_do_list"
+    t.datetime "date_applied"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -31,13 +31,18 @@ app2 = Application.create(user_id: hannah.id, job_listing_id: listing2.id, statu
 app3 = Application.create(user_id: hannah.id, job_listing_id: listing3.id, status: "interviewed")
 app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied")
 app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "interview scheduled")
+
+app7 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
+app8 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "applied")
+app9 = Application.create(user_id: senada.id, job_listing_id: listing3.id, status: "interviewed")
+
 app6 = Application.create(user_id: cristian.id, job_listing_id: listing1.id, status: "applied")
 
 # INTERVIEWS
 Interview.create(application_id: app1.id, date: DateTime.now, complete: false, interviewer: "Bashir", location: "NYC", notes: "im so nervous")
 Interview.create(application_id: app2.id, date: DateTime.now, complete: false, interviewer: "TBD", location: "NYC", notes: "i got this in the bag- to ask: 'when is my start date'")
 Interview.create(application_id: app3.id, date: DateTime.now, complete: true, interviewer: "Jack", location: "NYC", notes: "it went horribly :(")
-Interview.create(application_id: app4.id, date: DateTime.now, complete: false, interviewer: "Rei", location: "NYC", notes: "prep a lot for this")
+Interview.create(application_id: app7.id, date: DateTime.now, complete: false, interviewer: "Rei", location: "NYC", notes: "prep a lot for this")
 Interview.create(application_id: app5.id, date: DateTime.now, complete: false, interviewer: "Michelle", location: "NYC", notes: "heard this interviewer is really sweet")
 Interview.create(application_id: app6.id, date: DateTime.now, complete: false, interviewer: "Ian", location: "NYC", notes: "lets GOOOO")
 
