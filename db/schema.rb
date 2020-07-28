@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_143641) do
 
   create_table "interviews", force: :cascade do |t|
     t.integer "application_id"
+    t.integer "user_id"
     t.datetime "date"
     t.boolean "complete"
     t.string "interviewer"
