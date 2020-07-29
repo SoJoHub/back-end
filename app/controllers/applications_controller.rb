@@ -18,11 +18,17 @@ class ApplicationsController < ApplicationController
         render json: application
     end 
 
+    def destroy
+        application = Application.find(params[:id])
+        deleted = application.destroy
+        render json: deleted
+    end
+
 
     private
   
     def application_params
-      params.permit(:user_id, :job_listing_id, :status, :date_applied)
+      params.permit(:id, :user_id, :job_listing_id, :status, :date_applied)
     end
 
     def job_listing_params
