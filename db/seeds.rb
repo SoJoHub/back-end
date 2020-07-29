@@ -26,17 +26,16 @@ listing2 = JobListing.create(company: "Google", title: "software engineer", desc
 listing3 = JobListing.create(company: "Amazon", title: "software engineer", description: "eat sleep code repeat", location: "Seattle", listing_url: "amazon.com")
 
 # APPLICATIONS
-app1 = Application.create(user_id: hannah.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
+app1 = Application.create(user_id: hannah.id, job_listing_id: listing1.id, status: "applied")
 app2 = Application.create(user_id: hannah.id, job_listing_id: listing2.id, status: "applied")
 app3 = Application.create(user_id: hannah.id, job_listing_id: listing3.id, status: "interviewed")
 app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied")
 app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "interview scheduled")
-
-app7 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
+app6 = Application.create(user_id: cristian.id, job_listing_id: listing1.id, status: "applied")
+app7 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied")
 app8 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "applied")
 app9 = Application.create(user_id: senada.id, job_listing_id: listing3.id, status: "applied")
 
-app6 = Application.create(user_id: cristian.id, job_listing_id: listing1.id, status: "applied")
 
 # INTERVIEWS
 # Interview.create(application_id: app1.id, date: DateTime.now, complete: false, interviewer: "Bashir", location: "NYC", notes: "im so nervous")
@@ -75,10 +74,59 @@ Comment.create(topic_id: topic4.id, user_id: cristian.id, content: "how did you 
 Comment.create(topic_id: topic4.id, user_id: hannah.id, content: "you are a robot bashir")
 
 #Todos 
-# Todo.create(application_id: app1.id, task: "buy milk", complete: false)
-# Todo.create(application_id: app1.id, task: "walk dog", complete: false)
-# Todo.create(application_id: app1.id, task: "Interview with JP Morgan", complete: false)
-# Todo.create(application_id: app1.id, task: "eat", complete: false)
+Todo.create(application_id: app1.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app1.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app1.id, task: "Research company", complete: false)
+Todo.create(application_id: app1.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app1.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app2.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app2.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app2.id, task: "Research company", complete: false)
+Todo.create(application_id: app2.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app2.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app3.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app3.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app3.id, task: "Research company", complete: false)
+Todo.create(application_id: app3.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app3.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app4.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app4.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app4.id, task: "Research company", complete: false)
+Todo.create(application_id: app4.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app4.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app5.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app5.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app5.id, task: "Research company", complete: false)
+Todo.create(application_id: app5.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app5.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app6.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app6.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app6.id, task: "Research company", complete: false)
+Todo.create(application_id: app6.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app6.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app7.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app7.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app7.id, task: "Research company", complete: false)
+Todo.create(application_id: app7.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app7.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app8.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app8.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app8.id, task: "Research company", complete: false)
+Todo.create(application_id: app8.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app8.id, task: "Schedule interview", complete: false)
+
+Todo.create(application_id: app9.id, task: "Send cover letter", complete: false)
+Todo.create(application_id: app9.id, task: "Send follow up email", complete: false)
+Todo.create(application_id: app9.id, task: "Research company", complete: false)
+Todo.create(application_id: app9.id, task: "Send thank you note", complete: false)
+Todo.create(application_id: app9.id, task: "Schedule interview", complete: false)
 
 
 

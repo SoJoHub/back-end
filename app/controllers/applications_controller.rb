@@ -2,14 +2,17 @@ class ApplicationsController < ApplicationController
     # THIS IS OUR APPLICATIONS CONTROLLER
     before_action :authorized
     def index
-       
         applications =  @user.applications
         render json: applications
     end
 
     def show 
         application = Application.find(params[:id])
-        render json: application
+        todos = application.todos
+        render json: {
+            application: application,
+            todos: todos,
+        }   
     end
 
     def create 
