@@ -19,10 +19,11 @@ class CommentsController < ApplicationController
         # comment = Comment.create(user_id: @user.id, topic_id: comments_params["topic_id"], content: comments_params["content"])
         # render json: {comment: comment, user_name: @user.name}
         # /ws try blw
-        comment = Comment.new(comments_params)
+        comment = Comment.new(user_id: @user.id, topic_id: params["topic_id"], content: params["content"])
 
-        topic = Comment.find(comments_params[:comment_id])
-        if message.save
+        # topic = Comment.find(comments_params[:comment_id])
+        topic = Comment.find(params["topic_id"])
+        if comment.save
           serialized_data = ActiveModelSerializers::Adapter::Json.new(
             CommentsSerializer.new(comment)
           ).serializable_hash

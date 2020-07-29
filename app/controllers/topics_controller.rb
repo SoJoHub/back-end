@@ -19,7 +19,7 @@ class TopicsController < ApplicationController
         #
         # render json: topic
         #
-        topic = Topic.new(topic_params)
+        topic = Topic.new(forum_id: Forum.first.id, user_id: @user.id, title: params["topic"]["title"] )
         if topic.save 
             serialized_data = ActiveModelSerializers::Adapter::Json.new(
                 TopicSerializer.new(topic)
