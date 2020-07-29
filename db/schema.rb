@@ -64,10 +64,9 @@ ActiveRecord::Schema.define(version: 2020_07_29_153538) do
   create_table "todos", force: :cascade do |t|
     t.string "task"
     t.boolean "complete"
-    t.bigint "application_id", null: false
+    t.integer "application_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["application_id"], name: "index_todos_on_application_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -90,5 +89,4 @@ ActiveRecord::Schema.define(version: 2020_07_29_153538) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "todos", "applications"
 end

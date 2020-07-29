@@ -74,6 +74,13 @@ Comment.create(topic_id: topic3.id, user_id: bashir.id, content: "i'm grandpa sh
 Comment.create(topic_id: topic4.id, user_id: cristian.id, content: "how did you do it :O")
 Comment.create(topic_id: topic4.id, user_id: hannah.id, content: "you are a robot bashir")
 
+#Todos 
+# Todo.create(application_id: app1.id, task: "buy milk", complete: false)
+# Todo.create(application_id: app1.id, task: "walk dog", complete: false)
+# Todo.create(application_id: app1.id, task: "Interview with JP Morgan", complete: false)
+# Todo.create(application_id: app1.id, task: "eat", complete: false)
+
+
 
 
 puts "=========================="
