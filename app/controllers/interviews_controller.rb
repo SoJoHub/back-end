@@ -1,5 +1,5 @@
 class InterviewsController < ApplicationController
-    # before_action :authorized
+    before_action :authorized
     def index
         interviews = @user.interviews
         render json: interviews
@@ -11,6 +11,11 @@ class InterviewsController < ApplicationController
          render json: interview
     end
 
+    def create 
+        interview = Interview.create(interview_params)
+        render json: interview
+    end 
+
     def destroy 
         interview = Interview.find(params["id"])
         deleted = interview.destroy
@@ -21,6 +26,6 @@ class InterviewsController < ApplicationController
     private
 
     def interview_params
-        params.permit(:id)
+        params.permit(:id, :interviewer, :location, :date, :notes)
     end
 end

@@ -8,10 +8,8 @@ class ApplicationsController < ApplicationController
     end
 
     def show 
-        @application = Application.find(params[:id])
-        render json: {
-            application: @application
-        }
+        application = Application.find(params[:id])
+        render json: application
     end
 
     def create 
