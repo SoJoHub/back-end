@@ -13,9 +13,21 @@ class TopicsController < ApplicationController
     end
 
     def create 
-        topic = Topic.create(forum_id: 1, user_id: @user.id, title: topics_params["topic"], description: topics_params["description"])
-        render json: topic
-    end 
+        # byebug
+        # topic = Topic.create(forum_id: Forum.first.id, user_id: @user.id, title:params["topic"], description: params["description"])
+        # byebug
+        #
+        # render json: topic
+        #
+        topic = Topic.new(topic_params)
+        if topic.save 
+            serialized_data = ActiveModelSerializers::Adapter::Json.new(
+                TopicSerializer.new(topic)
+              ).serializable_hash
+              ActionCable.server.broadcast 'topics_channel', serialized_data
+                head :ok
+            end
+        end 
 
     def destroy  
         topic = Topic.find(params["id"])
@@ -26,7 +38,7 @@ class TopicsController < ApplicationController
     def update 
         topic = Topic.find(params["id"])
         updated = topic.update(title: topics_params["topic"], description: topics_params["description"])
-        render json: updated
+        render json: topic
     end 
 
 

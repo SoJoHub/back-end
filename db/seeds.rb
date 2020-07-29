@@ -29,10 +29,10 @@ listing3 = JobListing.create(company: "Amazon", title: "software engineer", desc
 app1 = Application.create(user_id: hannah.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
 app2 = Application.create(user_id: hannah.id, job_listing_id: listing2.id, status: "applied")
 app3 = Application.create(user_id: hannah.id, job_listing_id: listing3.id, status: "interviewed")
-app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied")
-app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "interview scheduled")
+app4 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "interviewed")
+app5 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "interviewed")
 
-app7 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "applied", to_do_list: "{ }")
+app7 = Application.create(user_id: senada.id, job_listing_id: listing1.id, status: "interviewed", to_do_list: "{ }")
 app8 = Application.create(user_id: senada.id, job_listing_id: listing2.id, status: "applied")
 app9 = Application.create(user_id: senada.id, job_listing_id: listing3.id, status: "applied")
 
@@ -75,10 +75,10 @@ Comment.create(topic_id: topic4.id, user_id: cristian.id, content: "how did you 
 Comment.create(topic_id: topic4.id, user_id: hannah.id, content: "you are a robot bashir")
 
 #Todos 
-# Todo.create(application_id: app1.id, task: "buy milk", complete: false)
-# Todo.create(application_id: app1.id, task: "walk dog", complete: false)
-# Todo.create(application_id: app1.id, task: "Interview with JP Morgan", complete: false)
-# Todo.create(application_id: app1.id, task: "eat", complete: false)
+Todo.create(application_id: app1.id, task: "buy milk", complete: false)
+Todo.create(application_id: app1.id, task: "walk dog", complete: false)
+Todo.create(application_id: app1.id, task: "Interview with JP Morgan", complete: false)
+Todo.create(application_id: app1.id, task: "eat", complete: false)
 
 
 
