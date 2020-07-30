@@ -1,5 +1,6 @@
 class InterviewsController < ApplicationController
     before_action :authorized
+
     def index
         interviews = @user.interviews
         render json: interviews
@@ -12,7 +13,7 @@ class InterviewsController < ApplicationController
     end
 
     def create 
-        interview = Interview.create(interview_params)
+        interview = Interview.create(application_id: params["application_id"], user_id: @user.id, date: params["date"], complete: params["complete"], interviewer: params["interviewer"], notes: params["notes"])
         render json: interview
     end 
 
@@ -22,6 +23,13 @@ class InterviewsController < ApplicationController
 
         render json: deleted
     end
+
+    def update 
+        interview = Interview.find(params["id"])
+        # byebug 
+        interview.update(date: params["date"], complete: params["complete"], interviewer: params["interviewer"], notes: params["notes"])
+        render json: interview
+    end 
 
     private
 
