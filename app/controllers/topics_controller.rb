@@ -26,7 +26,7 @@ class TopicsController < ApplicationController
     def update 
         topic = Topic.find(params["id"])
         updated = topic.update(title: topics_params["topic"], description: topics_params["description"])
-        render json: updated
+        render json: topic
     end 
 
 
