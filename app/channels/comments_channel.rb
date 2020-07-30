@@ -1,6 +1,8 @@
 class CommentsChannel < ApplicationCable::Channel
   def subscribed
     topic = Topic.find(params[:topic])
+    # topic = Topic.find(params["topic_id"])
+
     stream_for topic
 
   end
