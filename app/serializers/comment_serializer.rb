@@ -1,3 +1,10 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :thread_id, :user_id, :date_time, :content
+  attributes :id, :topic_id, :user_id, :content, :created_at, :user_name
+
+  def user_name 
+    self.object.user.name 
+  end 
+  def topic
+    self.object.topic.title 
+  end 
 end

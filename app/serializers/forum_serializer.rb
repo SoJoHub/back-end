@@ -1,3 +1,3 @@
 class ForumSerializer < ActiveModel::Serializer
-  attributes :id, :title
+  attributes :id, :title, :created_at
 end
